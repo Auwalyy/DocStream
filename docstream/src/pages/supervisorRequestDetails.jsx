@@ -19,9 +19,7 @@ const SupervisorRequestDetails = () => {
     <div className="request-detail-container">
       {/* Header with Back Arrow */}
       <div className="detail-header">
-        <button className="back-btn" onClick={() => navigate(-1)}>
-          <ArrowLeft size={20} /> Back
-        </button>
+        
         <h3>ROM Supervisor Dashboard</h3>
       </div>
 

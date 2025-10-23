@@ -23,22 +23,10 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <h2>{isSupervisor ? "ROM Supervisor Dashboard" : "Staff Dashboard"}</h2>
+      <h2> Dashboard</h2>
 
       <div className="navbar-right">
-        {/* Role Switcher */}
-        <div className="role-switcher">
-          <label htmlFor="role-select">Role:</label>
-          <select
-            id="role-select"
-            value={userRole}
-            onChange={(e) => setUserRole(e.target.value)}
-            className="role-select"
-          >
-            <option value="ict-staff">ICT</option>
-            <option value="supervisor">Supervisor</option>
-          </select>
-        </div>
+       
 
         {/* Active Status */}
         <div className="active-status">

@@ -1,34 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import logo from "../assets/logo.png";
 
 const Sidebar = () => {
-  const [userRole, setUserRole] = useState("ict-staff");
+  const userRole = "ict-staff";
   const isICTStaff = userRole === "ict-staff";
 
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <img src={logo} alt="logo" className="logo" />
-        
-        {/* Role Switcher - Remove this in production */}
-        <div className="role-switcher">
-          <label htmlFor="role-select"> Role:</label>
-          <select 
-            id="role-select"
-            value={userRole} 
-            onChange={(e) => setUserRole(e.target.value)}
-            className="role-select"
-          >
-            <option value="ict-staff">ICT</option>
-            <option value="user">STAFF</option>
-          </select>
-        </div>
+        <img src={logo} alt="NMDPRA DocStream Logo" className="sidebar-logo" />
       </div>
 
       <nav className="sidebar-links">
-        <NavLink to='/supervisor' className="sidebar-link">
+        <NavLink to="/supervisor" className="sidebar-link">
           Dashboard
         </NavLink>
         <NavLink to="/find-company" className="sidebar-link">
@@ -43,7 +29,7 @@ const Sidebar = () => {
         <NavLink to="/request-items" className="sidebar-link">
           Request Items
         </NavLink>
-        
+
         {/* ICT Staff Only Links */}
         {isICTStaff && (
           <>
@@ -53,7 +39,7 @@ const Sidebar = () => {
             <NavLink to="/activity-log" className="sidebar-link">
               Activity Log
             </NavLink>
-             <NavLink to="/add-facility" className="sidebar-link">
+            <NavLink to="/add-facility" className="sidebar-link">
               Add Facility
             </NavLink>
             <NavLink to="/edit-driver-vehicle-info" className="sidebar-link">

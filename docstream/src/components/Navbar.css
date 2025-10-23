@@ -1,104 +1,181 @@
 .navbar {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px;
-    position: relative;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  position: relative;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
 }
 
+/* Right side elements (status, profile, etc.) */
 .navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
+/* === Active Status === */
 .active-status {
-    background: #e8f8ee;
-    color: #0f7a41;
-    font-weight: 500;
-    border-radius: 25px;
-    padding: 6px 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  background: #e8f8ee;
+  color: #0f7a41;
+  font-weight: 500;
+  border-radius: 25px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
 }
 
 .status-dot {
-    width: 10px;
-    height: 10px;
-    background: #0f7a41;
-    border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #0f7a41;
+  border-radius: 50%;
 }
-
-
-/* === Role Switcher === */
-
-.role-switcher {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-}
-
-.role-select {
-    padding: 4px 6px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
 
 /* === Notifications === */
-
 .notification-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .notification-icon {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 
 .badge {
-    position: absolute;
-    top: -8px;
-    right: -6px;
-    background: red;
-    color: white;
-    font-size: 10px;
-    border-radius: 50%;
-    padding: 2px 5px;
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 2px 5px;
 }
 
 .notification-dropdown {
-    position: absolute;
-    top: 35px;
-    right: 0;
-    width: 280px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    z-index: 100;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  width: 280px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 100;
 }
 
 .notification-item {
-    display: flex;
-    align-items: center;
-    background: #e8f8ee;
-    margin: 6px 0;
-    padding: 8px 10px;
-    border-radius: 6px;
+  display: flex;
+  align-items: center;
+  background: #e8f8ee;
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 6px;
 }
 
 .notif-icon {
-    width: 28px;
-    height: 28px;
-    background: #cdeed4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  background: #cdeed4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+/* === Profile Icon === */
+.profile-icon {
+  background: #e8f8ee;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ======== Responsive Styles ======== */
+
+/* Tablet screens */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 12px 18px;
+  }
+
+  .navbar h2 {
+    font-size: 18px;
+  }
+
+  .navbar-right {
+    gap: 12px;
+  }
+
+  .active-status {
+    padding: 4px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 15px;
+  }
+
+  .navbar h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .active-status {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .notification-dropdown {
+    width: 100%;
+    right: 0;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar h2 {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .active-status {
+    font-size: 11px;
+    padding: 3px 7px;
+  }
+
+  .notification-dropdown {
+    width: 95%;
+  }
+
+  .notification-item p {
+    font-size: 13px;
+  }
 }

@@ -1,22 +1,84 @@
-.role-switcher {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
+.sidebar {
+  width: 270px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
 }
 
-.role-switcher label {
-    display: block;
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 5px;
+.sidebar-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.role-select {
+.sidebar-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-width: 200px;
+}
+
+.sidebar-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: #047857;
+  border: 1px solid #047857;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-link:hover {
+  background: #047857;
+  color: white;
+}
+
+.sidebar-link.active {
+  background: #047857;
+  color: white;
+  border-color: #047857;
+}
+
+/* ✅ Make Sidebar Responsive */
+@media (max-width: 768px) {
+  .sidebar {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #047857;
-    border-radius: 4px;
-    background: white;
-    color: #047857;
-    font-size: 14px;
+    flex-direction: row;
+    justify-content: space-around;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .sidebar-header {
+    width: auto;
+  }
+
+  .sidebar-logo {
+    max-width: 120px;
+  }
+
+  .sidebar-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .sidebar-link {
+    font-size: 13px;
+  }
 }
