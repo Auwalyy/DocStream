@@ -1,0 +1,164 @@
+/* src/pages/Supervisor.css */
+
+.supervisor-container {
+    padding: 20px;
+}
+
+.supervisor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notif-icon {
+    position: relative;
+}
+
+.notif-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.request-list {
+    margin-top: 20px;
+}
+
+.request-card {
+    background: #f6f6f6;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.request-card:hover {
+    background: #e7f9e7;
+}
+
+.view-btn {
+    background: green;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+
+.request-detail-container {
+    padding: 20px;
+}
+
+.incoming-banner {
+    background: #e3f5e3;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.request-fields label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.request-fields input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    background: #efefef;
+    border-radius: 5px;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.accept-btn {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.decline-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.review-btn {
+    background: white;
+    color: green;
+    border: 1px solid green;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.detail-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: green;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* Fixed Back Button */
+
+.fixed-back-btn {
+    position: fixed;
+    top: 15px;
+    left: 230px;
+    /* adjust depending on sidebar width */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: green;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.fixed-back-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* Header */
+
+.detail-header {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}

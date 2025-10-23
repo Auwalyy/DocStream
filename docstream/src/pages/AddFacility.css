@@ -1,0 +1,102 @@
+.add-facility-container {
+    padding: 40px 60px;
+    position: relative;
+    width: 100%;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #333;
+}
+
+
+/* Grid layout for the two sections */
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.facility-section {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.facility-section h4 {
+    margin-bottom: 15px;
+    color: green;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #6be99f;
+}
+
+
+/* Save Changes Button */
+
+.save-btn-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.save-btn {
+    padding: 10px 30px;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.save-btn:hover {
+    background: green;
+}
+
+
+/* Fixed Back Button */
+
+.fixed-back-btn {
+    position: fixed;
+    top: 15px;
+    left: 230px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: green;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.fixed-back-btn:hover {
+    text-decoration: underline;
+}

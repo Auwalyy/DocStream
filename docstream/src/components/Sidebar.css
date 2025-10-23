@@ -1,0 +1,22 @@
+.role-switcher {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.role-switcher label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.role-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #047857;
+    border-radius: 4px;
+    background: white;
+    color: #047857;
+    font-size: 14px;
+}

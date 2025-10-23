@@ -1,0 +1,101 @@
+.vehicle-officer-dashboard {
+    padding: 40px 60px;
+}
+
+.page-title {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+
+/* Table Container */
+
+.info-table {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* Header Row */
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f2f2f2;
+    font-weight: 600;
+    color: #1f5133;
+    background-color: #f9f8fc;
+}
+
+
+/* Data Rows */
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.col-name,
+.col-time {
+    font-size: 15px;
+    color: #333;
+}
+
+.edit-btn {
+    background: #006d38;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.edit-btn:hover {
+    background: #045c31;
+}
+
+
+/* Buttons Below Table */
+
+.table-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.export-btn {
+    background: #f7b92f;
+    color: #333;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.share-btn {
+    border: 1.5px solid #006d38;
+    background: transparent;
+    color: #006d38;
+    padding: 10px 35px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.share-btn:hover {
+    background: #eaf7ef;
+}
