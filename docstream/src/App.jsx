@@ -10,22 +10,25 @@ import InventoryForm from "./pages/InventoryForm";
 import Request from "./pages/Request";
 import StaffManagement from "./pages/StaffManagement";
 import AddStaff from "./components/AddStaff";
-import StaffEdit from './components/StaffEdit'
+import StaffEdit from "./components/StaffEdit";
 import ActivityLog from "./pages/ActivityLog";
 import SupervisorDashboard from "./pages/Supervisor";
 import SupervisorRequestDetails from "./pages/supervisorRequestDetails";
-import AddFacility from "./pages/AddFacility"
+import AddFacility from "./pages/AddFacility";
 import EditDriverVehicleInfo from "./pages/EditDriverVehicleInfo";
 
 function App() {
   return (
+    <Router>
       <div className="app-container">
         <Sidebar />
         <div className="main-content">
           <Navbar />
           <main className="page-content">
             <Routes>
-              <Route path="/" element={<FindCompany />} />
+              <Route path="/" element={<AddStaff />} />
+
+              {/* Other routes */}
               <Route path="/find-company" element={<FindCompany />} />
               <Route path="/request-vehicle" element={<RequestVehicle />} />
               <Route path="/request-vehicle/within" element={<WithinRequest />} />
@@ -36,7 +39,7 @@ function App() {
               <Route path="/staff-management/add" element={<AddStaff />} />
               <Route path="/staff-management/edit/:id" element={<StaffEdit />} />
               <Route path="/activity-log" element={<ActivityLog />} />
-              <Route path="/supervisor" element={<SupervisorDashboard />}  />
+              <Route path="/supervisor" element={<SupervisorDashboard />} />
               <Route path="/supervisor/request/:id" element={<SupervisorRequestDetails />} />
               <Route path="/add-facility" element={<AddFacility />} />
               <Route path="/edit-driver-vehicle-info" element={<EditDriverVehicleInfo />} />
@@ -44,7 +47,7 @@ function App() {
           </main>
         </div>
       </div>
-    
+    </Router>
   );
 }
 
