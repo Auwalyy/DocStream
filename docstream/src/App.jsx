@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {   Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import FindCompany from "./pages/CompanyDetails";
@@ -19,17 +19,13 @@ import EditDriverVehicleInfo from "./pages/EditDriverVehicleInfo";
 
 function App() {
   return (
-    <Router>
-      <div className="app-container">
+       <div className="app-container">
         <Sidebar />
         <div className="main-content">
           <Navbar />
           <main className="page-content">
             <Routes>
-              <Route path="/" element={<AddStaff />} />
-
-              {/* Other routes */}
-              <Route path="/find-company" element={<FindCompany />} />
+               <Route path="/find-company" element={<FindCompany />} />
               <Route path="/request-vehicle" element={<RequestVehicle />} />
               <Route path="/request-vehicle/within" element={<WithinRequest />} />
               <Route path="/request-vehicle/out-of-town" element={<OutOfTown />} />
@@ -47,8 +43,7 @@ function App() {
           </main>
         </div>
       </div>
-    </Router>
-  );
+   );
 }
 
 export default App;
