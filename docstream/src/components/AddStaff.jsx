@@ -10,7 +10,7 @@ const AddStaff = () => {
     name: "",
     department: "",
     role: "",
-    status: null,
+    status: "active",
   });
 
   const [loading, setLoading] = useState(false);
@@ -46,7 +46,7 @@ const AddStaff = () => {
           name: "",
           department: "",
           role: "",
-          status: null,
+          status: "active",
         });
       } else {
         const error = await response.json();
