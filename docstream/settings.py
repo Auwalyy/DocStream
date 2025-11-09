@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'management'
+    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
+
+    'management',
+    'appAuth',
 ]
 
 MIDDLEWARE = [
@@ -114,14 +118,42 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+# Django Rest Framework Config
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
 }
 
+# JWT Settings
+from datetime import timedelta
+
+# Custom User Model
+AUTH_USER_MODEL = 'appAuth.User'
+
+# Authentication Backends
+AUTHENTICATION_BACKENDS = [
+    'appAuth.backends.StaffAuthBackend',
+    'django.contrib.auth.backends.ModelBackend',  # Keep for admin
+]
+
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'USER_ID_FIELD': 'staff_id',
+    'USER_ID_CLAIM': 'staff_id',
+}
 
 
 # Static files (CSS, JavaScript, Images)
